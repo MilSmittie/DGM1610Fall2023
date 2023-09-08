@@ -22,7 +22,7 @@ public class Program
 		heroThree.health = 2;
 		heroThree.powerLevel = 4;
 		
-		//changing statistics
+		//changing values
 		heroOne.health --;
 		heroOne.powerLevel --;
         heroTwo.powerLevel ++;
@@ -30,7 +30,7 @@ public class Program
 		heroThree.health --;
 		heroThree.powerLevel ++;
 		
-		//if hero dies itll say
+		//if hero dies console states hero's fate
 		if (heroOne.health <= 0) 
 		{
 			Console.WriteLine("John Cena lives another day!");

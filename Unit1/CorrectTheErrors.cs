@@ -1,3 +1,4 @@
+//fixed the errors in the code.
 using System;
 
 public class CorrectTheErrors

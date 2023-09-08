@@ -1,3 +1,4 @@
+//practice variables and functions
 public class ClassExamplePractice 
 {
     public int numberCountForHealth;
@@ -8,9 +9,10 @@ public class ClassExamplePractice
     }
 }
 
-
+//practice convert from string to int
 int rapperOneswagger = Convert.ToInt32(Console.ReadLine());
 
+//practice if else if else
 if (blankOne > blankTwo)
 		{
 			Console.WriteLine("blankOne WINS!!!");

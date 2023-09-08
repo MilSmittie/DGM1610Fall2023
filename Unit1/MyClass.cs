@@ -50,7 +50,7 @@ public class Program
 		Console.WriteLine("Lil Sponge's roasts are a whoppin " + rapperTwo.roast + " degrees");
 		Console.WriteLine();
 		
-		//Determining the winner trough Boolean
+		//Determining the winner through Boolean
 		if (rapperOneswagger > rapperTwoswagger)
 		{
 			Console.WriteLine("LIL PATTY WINS!!!");
