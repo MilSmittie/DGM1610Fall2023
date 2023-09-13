@@ -12,12 +12,7 @@ public class Program
 	
 	public void Check(int value)
 	{
-		if(value > 30)
-		{
-			Console.WriteLine("Stay hydrated and avoid staying in the sun for too long!");
-		} else
-		{
-			Console.WriteLine("Enjoy the pleasant weather!");
-		}
+		string result = (value > 30) ? "Stay hydrated and avoid staying in the sun for too long!" : "Enjoy the pleasant weather!";
+		Console.WriteLine(result);
 	}
 }
