@@ -24,13 +24,13 @@ public class Program
 		
 		//Storing Lil Patty's statistics;
 		rapperOne.flow = 72;
-		rapperOne.crowdControl = 8;
+		rapperOne.crowdControl = 8.2f;
 		rapperOne.roast = 203;
 		
 		//Storing Lil Sponge's statistics
 		rapperTwo.swagger = 75;
 		rapperTwo.flow = 65;
-		rapperTwo.crowdControl = 6;
+		rapperTwo.crowdControl = 6.9f;
 		rapperTwo.roast = 97;
 		
 		//Displaying Lil Patty's statistics
@@ -76,5 +76,5 @@ public class Rapper
 	public int swagger;
 	public int roast;
 	public int flow;
-	public int crowdControl;
+	public float crowdControl;
 }
