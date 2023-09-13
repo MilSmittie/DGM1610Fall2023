@@ -14,9 +14,10 @@ public class Program
         Compare(grade);
 	}
 	
+    //Operations
 	public void Compare(int grade)
 	{
-        //Assigned a letter grade to the value the user inputed.
+    //Assigned a letter grade to the value the user inputed.
 	if(grade >= 90)
         {
             Console.WriteLine("You got an A!!! Your hard work has paid off!!!");
