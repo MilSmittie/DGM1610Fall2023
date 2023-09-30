@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         walking,
         sprinting,
+        crouching,
         air
     }
 
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         origionalStepOffset = characterController.stepOffset;
+        startYScale = transform.localScale.y;
     }
 
     //Update called once per frame
@@ -78,10 +80,28 @@ public class PlayerController : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
+
+        //start crouch
+        if (Input.GetKeyDown(crouchKey)) 
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+        }
+
+        else
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
     }
 
     private void StateHandler()
     {
+        //Mode Crouching
+        if (characterController.isGrounded && Input.GetKey(crouchKey))
+        {
+            state = MovementState.crouching;
+            speed = crouchSpeed;
+        }
+
         //Mode Sprinting
         if (characterController.isGrounded && Input.GetKey(sprintKey))
         {

@@ -559,12 +559,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c409fd127ae094da42e86f3a2a14f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 10
   sprintSpeed: 20
   rotationSpeed: 0
   jumpSpeed: 5
+  crouchSpeed: 1
+  crouchYScale: 0.5
   sprintKey: 304
   jumpKey: 32
+  crouchKey: 306
   state: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
