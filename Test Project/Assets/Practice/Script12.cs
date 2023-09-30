@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Script11 : MonoBehaviour
+public class Script12 : MonoBehaviour
 {
     void FixedUpdate()
     {

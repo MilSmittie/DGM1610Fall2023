@@ -22,4 +22,3 @@ public class Script17 : MonoBehaviour
             transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
     }
 }
-}

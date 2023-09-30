@@ -26,3 +26,13 @@ public class Script28 : MonoBehaviour
         Debug.Log("The player has died " + yetAnotherScript.numberOfPlayerDeaths + " times");
     }
 }
+
+public class AnotherScript : MonoBehaviour
+{
+    public int playerScore = 9001;
+}
+
+public class YetAnotherScript : MonoBehaviour
+{
+    public int numberOfPlayerDeaths = 3;
+}
