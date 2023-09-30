@@ -4,13 +4,31 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    private CharacterController characterController;
+    
+    public float walkSpeed;
+    public float sprintSpeed;
     public float rotationSpeed;
     public float jumpSpeed;
-
-    private CharacterController characterController;
+    public float crouchSpeed;
+    public float crouchYScale;
+    private float speed;
+    private float startYScale;
     private float ySpeed;
     private float origionalStepOffset;
+
+
+    public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode jumpKey = KeyCode.Space;
+    public KeyCode crouchKey = KeyCode.LeftControl;
+
+    public MovementState state;
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        air
+    }
 
     //Start called before first frame
 
@@ -24,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        StateHandler();
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -37,7 +57,7 @@ public class PlayerController : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
-
+        
         if (characterController.isGrounded)
         {
             ySpeed = -0.5f;
@@ -57,6 +77,28 @@ public class PlayerController : MonoBehaviour
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    private void StateHandler()
+    {
+        //Mode Sprinting
+        if (characterController.isGrounded && Input.GetKey(sprintKey))
+        {
+            state = MovementState.sprinting;
+            speed = sprintSpeed;
+        }
+
+        //Mode Walking
+        else if (characterController.isGrounded)
+        {
+            state = MovementState.walking;
+            speed = walkSpeed;
+        }
+
+        else
+        {
+            state = MovementState.air;
         }
     }
 }
