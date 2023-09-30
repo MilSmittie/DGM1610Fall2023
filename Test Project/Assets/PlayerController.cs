@@ -1,57 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private float gravity = 9.81f;
+    public float speed;
+    public float rotationSpeed;
+    public float jumpSpeed;
 
-    private CharacterController controller;
-    private Vector3 moveDirection;
-    private bool isJumping;
+    private CharacterController characterController;
+    private float ySpeed;
+    private float origionalStepOffset;
 
-    private void Start()
+    //Start called before first frame
+
+    void Start()
     {
-        // Get a reference to the CharacterController component.
-        controller = GetComponent<CharacterController>();
+        characterController = GetComponent<CharacterController>();
+        origionalStepOffset = characterController.stepOffset;
     }
+
+    //Update called once per frame
 
     private void Update()
     {
-        // Get player input for movement.
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Calculate movement direction based on input and player rotation.
-        Vector3 forwardMovement = transform.forward * verticalInput;
-        Vector3 rightMovement = transform.right * horizontalInput;
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
+        movementDirection.Normalize();
 
-        // Calculate the movement direction vector.
-        moveDirection = (forwardMovement + rightMovement).normalized * moveSpeed;
+        Vector3 velocity = movementDirection * magnitude;
+        velocity.y = ySpeed;
 
-        // Check for jump input and if the player is grounded.
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        characterController.Move(velocity * Time.deltaTime);
+
+        ySpeed += Physics.gravity.y * Time.deltaTime;
+
+        if (characterController.isGrounded)
         {
-            isJumping = true;
+            ySpeed = -0.5f;
+            characterController.stepOffset = origionalStepOffset;
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                ySpeed = jumpSpeed;
+            }
+        }
+        else
+        {
+            characterController.stepOffset = 0;
         }
 
-        // Apply gravity.
-        if (!controller.isGrounded)
+        if (movementDirection != Vector3.zero)
         {
-            moveDirection.y = gravity * Time.deltaTime;
-        }
-
-        // Apply movement to the CharacterController.
-        controller.Move(moveDirection * Time.deltaTime);
-
-        // Apply jump if the player is jumping.
-        if (isJumping)
-        {
-            moveDirection.y = jumpForce;
-            isJumping = false; // Reset the jump flag.
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
     }
 }
