@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -9,12 +10,6 @@ public class NewBehaviourScript : MonoBehaviour
     public float xRange = 20;
     public Transform blaster;
     public GameObject lazer;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -44,5 +39,11 @@ public class NewBehaviourScript : MonoBehaviour
             //Create lazer at blaster position retaining object's rotation
             Instantiate(lazer, blaster.transform.position, lazer.transform.rotation);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //delete any object with a trigger that hits the player
+        Destroy(other.gameObject);
     }
 }
