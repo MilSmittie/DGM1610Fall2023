@@ -222,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53148098}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7.033, y: 7.033, z: 7.033}
   m_ConstrainProportionsScale: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   speed: 20
   xRange: 20
   blaster: {fileID: 1757947358}
-  lazer: {fileID: 402977596115429194, guid: bea01be8138d6ce42bd3207b29fc617f, type: 3}
+  lazer: {fileID: 607255023367612109, guid: 0fe9bd5008b45f54d90ece7bc0762497, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ Transform:
   m_GameObject: {fileID: 1757947357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.68}
+  m_LocalPosition: {x: 0, y: 0, z: 0.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
