@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinDestroy : MonoBehaviour
+public class CoinDestroyOutOfBounds : MonoBehaviour
 {
-    public float lowBounds = -10;
+    public float lowBounds = -10.00f;
     // Start is called before the first frame update
     void Awake()
     {
