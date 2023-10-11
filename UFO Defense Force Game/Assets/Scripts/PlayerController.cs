@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 20;
     public float xRange = 20;
     public Transform blaster;
-    public GameObject lazer;
+    public GameObject lazerBolt;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Create lazer at blaster position retaining object's rotation
-            Instantiate(lazer, blaster.transform.position, lazer.transform.rotation);
+            Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
         }
     }
 

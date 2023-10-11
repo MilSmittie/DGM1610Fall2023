@@ -5,11 +5,11 @@ using UnityEngine;
 public class DestroyOutOfBounds : MonoBehaviour
 {
     public float topBounds = 30.00f;
-    public float lowBounds = -10.00f;
+    public float lowBounds = -25.00f;
     // Start is called before the first frame update
     void Awake()
     {
-        //Time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         }
     }
 }
