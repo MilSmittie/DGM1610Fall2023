@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class CoinDestroyOutOfBounds : MonoBehaviour
 {
-    public float lowBounds = -10.00f;
+    public float topBounds = 30.00f;
+    public float lowBounds = -25.00f;
     // Start is called before the first frame update
-    void Awake()
-    {
-        //Time.timeScale = 1.0f;
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < lowBounds)
+        if (transform.position.z > topBounds)
         {
             Destroy(gameObject);
-            //Time.timeScale = 0;
         }
+        else if (transform.position.z < lowBounds)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log("+1 Coin");
+            Destroy(gameObject);
+        }
+        
     }
 }
+

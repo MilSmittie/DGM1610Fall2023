@@ -41,9 +41,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //delete any object with a trigger that hits the player
-        Destroy(other.gameObject);
-    }
 }

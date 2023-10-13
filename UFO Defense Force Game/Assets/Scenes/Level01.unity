@@ -242,11 +242,10 @@ GameObject:
   - component: {fileID: 518375049}
   - component: {fileID: 518375048}
   - component: {fileID: 518375052}
-  - component: {fileID: 518375053}
   - component: {fileID: 518375054}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,18 +354,6 @@ MonoBehaviour:
   xRange: 26
   blaster: {fileID: 1757947358}
   lazerBolt: {fileID: 607255023367612109, guid: 0fe9bd5008b45f54d90ece7bc0762497, type: 3}
---- !u!114 &518375053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518375047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b695308f0bc34664d9380e368ffe6777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &518375054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -672,10 +659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65809e2285d3d1e4fa7c89032bfe5e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopSpawning: 0
-  spawnTime: 1
-  spawnDelay: 3
-  spawner: {fileID: 1640531372}
   coin: {fileID: 4856831311257172743, guid: f3e1fb676a06c0b4fba441f6e6e9fc30, type: 3}
 --- !u!1 &1757947357
 GameObject:

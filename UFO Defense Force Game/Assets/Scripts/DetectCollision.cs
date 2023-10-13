@@ -6,7 +6,16 @@ public class DetectCollision : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+            if (other.gameObject.tag == "Player")
+            {
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+            }
+
+            if (other.gameObject.tag == "lazer")
+            {
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+            }
     }
 }

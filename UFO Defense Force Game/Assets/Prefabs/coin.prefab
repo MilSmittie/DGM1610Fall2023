@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8959792442936618255}
   - component: {fileID: 3688924046020768903}
   - component: {fileID: 5115990304451044566}
-  - component: {fileID: 5174427299827346429}
-  - component: {fileID: 2952891323688966127}
+  - component: {fileID: 7691194595267367924}
+  - component: {fileID: -578408531322110462}
+  - component: {fileID: 4171858046221978309}
   m_Layer: 0
   m_Name: coin
   m_TagString: coin
@@ -109,7 +110,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &5174427299827346429
+--- !u!114 &7691194595267367924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &2952891323688966127
+--- !u!114 &-578408531322110462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +132,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4856831311257172743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1e9fe7b32934948819b9903677af5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3aa7044a76118894193294abd7a864ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   topBounds: 30
   lowBounds: -25
+--- !u!114 &4171858046221978309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856831311257172743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db774137dddcaca47afafd8e990f00ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 1, g: 0.989954, b: 0, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+  speed: 6.22
