@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
+    public ScoreManager scoreManager; //Store reference to score manager
+    public int scoreToGive;
+
+    void Start()
+    {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    }
     void OnTriggerEnter(Collider other)
     {
-            if (other.gameObject.tag == "Player")
-            {
-                Destroy(gameObject);
-                Destroy(other.gameObject);
-            }
-
-            if (other.gameObject.tag == "lazer")
-            {
-                Destroy(gameObject);
-                Destroy(other.gameObject);
-            }
+        scoreManager.IncreaseScore(scoreToGive);
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }
