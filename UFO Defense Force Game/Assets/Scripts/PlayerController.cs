@@ -10,6 +10,14 @@ public class PlayerController : MonoBehaviour
     public float xRange = 20;
     public Transform blaster;
     public GameObject lazerBolt;
+    public GameManager gameManager;
+    public AudioClip lazerSound; //lazer sound variable
+
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,8 +42,10 @@ public class PlayerController : MonoBehaviour
         }
 
         //If spacebar is pressed, shoot lazer
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
+            //play audio
+            AudioSource.PlayClipAtPoint(lazerSound, transform.position);
             //Create lazer at blaster position retaining object's rotation
             Instantiate(lazerBolt, blaster.transform.position, lazerBolt.transform.rotation);
         }

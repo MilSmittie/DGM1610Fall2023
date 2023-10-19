@@ -6,6 +6,8 @@ public class DetectCollision : MonoBehaviour
 {
     public ScoreManager scoreManager; //Store reference to score manager
     public int scoreToGive;
+    public AudioClip enemySound; //enemy sound variable
+
 
     void Start()
     {
@@ -13,6 +15,7 @@ public class DetectCollision : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        AudioSource.PlayClipAtPoint(enemySound, transform.position);
         scoreManager.IncreaseScore(scoreToGive);
         Destroy(gameObject);
         Destroy(other.gameObject);

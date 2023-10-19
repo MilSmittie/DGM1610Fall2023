@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowBounds: -25
+  coinSound: {fileID: 8300000, guid: f3e9215a7c4a8544a88e2c86f88942a2, type: 3}
 --- !u!114 &4171858046221978309
 MonoBehaviour:
   m_ObjectHideFlags: 0

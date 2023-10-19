@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 53148101}
   - component: {fileID: 53148100}
   - component: {fileID: 53148099}
+  - component: {fileID: 53148103}
   m_Layer: 0
   m_Name: bkg
   m_TagString: Untagged
@@ -229,6 +230,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53148103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53148098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d2acdd0186a884bb3d7ff64168bf96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bkgSound: {fileID: 8300000, guid: dce32ee66b3a54242891a35b0eda7b94, type: 3}
 --- !u!1 &253719595
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99eb428c8ed3af64280bd52ed8978aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 1
   scoreText: {fileID: 909694917}
 --- !u!1 &518375047
 GameObject:
@@ -400,6 +414,8 @@ MonoBehaviour:
   xRange: 26
   blaster: {fileID: 1757947358}
   lazerBolt: {fileID: 607255023367612109, guid: 0fe9bd5008b45f54d90ece7bc0762497, type: 3}
+  gameManager: {fileID: 0}
+  lazerSound: {fileID: 8300000, guid: 46b0f4733b50e3a4f8554f9da536cb74, type: 3}
 --- !u!54 &518375054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -704,9 +720,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 766664300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 465}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 1, y: -75}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909694917
@@ -1018,7 +1034,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -856.8369, y: 0, z: -868.9064, w: 0}
+  m_margin: {x: -856.8369, y: -74.4104, z: -868.9064, w: -118.60394}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1229,9 +1245,9 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 53148102}
   - {fileID: 518375051}
-  - {fileID: 1640531372}
-  - {fileID: 253719596}
   - {fileID: 873719107}
+  - {fileID: 1640531372}
   - {fileID: 766664300}
   - {fileID: 1211935646}
   - {fileID: 2093327852}
+  - {fileID: 253719596}

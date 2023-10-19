@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (isGameOver)
+        if (isGameOver == true)
         {
             EndGame(); //start endgame
         }
-        else
+        else if (isGameOver == false)
         {
             gameOverText.gameObject.SetActive(false); //keep UI text game over hidden
         }
