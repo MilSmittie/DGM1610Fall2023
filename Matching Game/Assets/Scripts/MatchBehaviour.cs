@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MatchBehaviour : MonoBehaviour
 {
     public ID idObj;
+    public UnityEvent matchEvent, noMatchEvent;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,11 +15,11 @@ public class MatchBehaviour : MonoBehaviour
 
         if (otherID == idObj)
         {
-            Debug.Log("Match");
+            matchEvent.Invoke();
         }
         else
         {
-            Debug.Log("No Match");
+            noMatchEvent.Invoke();
         }
     }
 }
