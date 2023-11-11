@@ -7,17 +7,17 @@ public class MatchBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var tempObj = other.GetComponent<IDContainerBehaviour>();
-        
-        if (tempObj == null )
-        {
-            return;
-        }
-            
-        var otherID = tempObj.idObj; 
-        
+        var otherID = tempObj.idObj;
+
+        if (tempObj == null) return;
+
         if (otherID == idObj)
         {
-            Debug.Log("Matched");
+            Debug.Log("Match");
+        }
+        else
+        {
+            Debug.Log("No Match");
         }
     }
 }
