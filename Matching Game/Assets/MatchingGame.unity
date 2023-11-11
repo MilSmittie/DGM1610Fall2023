@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 874236771}
   - component: {fileID: 874236770}
   - component: {fileID: 874236769}
-  - component: {fileID: 874236768}
+  - component: {fileID: 874236773}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -235,19 +235,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &874236768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874236767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e59ef192c0da534bbda6cdb9d33ed3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 6c8e7af6e3884ce4fb7b1ae0a982c417, type: 2}
 --- !u!54 &874236769
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -363,6 +350,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874236773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874236767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e59ef192c0da534bbda6cdb9d33ed3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 11400000, guid: 6c8e7af6e3884ce4fb7b1ae0a982c417, type: 2}
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  noMatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &885219194
 GameObject:
   m_ObjectHideFlags: 0
