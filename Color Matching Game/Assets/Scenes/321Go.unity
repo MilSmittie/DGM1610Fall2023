@@ -247,6 +247,21 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 797501598}
+        m_TargetAssemblyTypeName: CoroutineBehaviour, Assembly-CSharp
+        m_MethodName: StartCounting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startCountEvent:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 11400000, guid: 0fb8829570a01fd479f89c70c17120d5, type: 2}
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: SetValue
@@ -259,7 +274,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  repeatEvent:
+  repeatCountEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1695215366}
@@ -286,21 +301,9 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
-  endEvent:
+  endCountEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1632631201}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GO!
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1695215366}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -313,6 +316,22 @@ MonoBehaviour:
           m_StringArgument: Hold
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1632631201}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GO!
+          m_BoolArgument: 0
+        m_CallState: 2
+  repearUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  canRun: 0
   counterNum: {fileID: 11400000, guid: 0fb8829570a01fd479f89c70c17120d5, type: 2}
   seconds: 1
 --- !u!4 &797501599
