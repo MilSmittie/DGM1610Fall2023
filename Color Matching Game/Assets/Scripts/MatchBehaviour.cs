@@ -8,9 +8,7 @@ public class MatchBehaviour : MonoBehaviour
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     private IEnumerator OnTriggerEnter(Collider other)
     {
-        var tempObj = other.GetComponent<IDContainerBehaviour>();
-
-        if (tempObj == null)
+        if (!other.TryGetComponent<IDContainerBehaviour>(out var tempObj))
             yield break;
 
         var otherID = tempObj.idObj;

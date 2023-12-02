@@ -218,7 +218,7 @@ MonoBehaviour:
         m_MethodName: ChangeColor
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8005047132168064572}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -364,11 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e36baef547d16842a8406a6b6d2aa8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &8005047132168064572 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3117551834194020055, guid: 5fbaf0747f962b64e84e1b8bb60b8e61, type: 3}
-  m_PrefabInstance: {fileID: 4923673630050846955}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8694442109894704219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4394591969139700912, guid: 5fbaf0747f962b64e84e1b8bb60b8e61, type: 3}

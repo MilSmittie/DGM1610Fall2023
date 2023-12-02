@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5463c9fa5ac9d428788bc33f95206b, type: 3}
-  m_Name: Counter
+  m_Script: {fileID: 11500000, guid: 6e312b209f3fc444e82f32e79743f81d, type: 3}
+  m_Name: DefaultColor
   m_EditorClassIdentifier: 
-  value: 3
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  value: {r: 0.13333334, g: 0.23137257, b: 0.32941177, a: 1}
