@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class CoroutineBehaviour : MonoBehaviour
 {
-    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repearUntilFalseEvent;
+    public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
 
     public bool canRun = false;
     public IntData counterNum;
@@ -51,7 +51,7 @@ public class CoroutineBehaviour : MonoBehaviour
         while (canRun)
         {
             yield return wfsObj;
-            repearUntilFalseEvent.Invoke();
+            repeatUntilFalseEvent.Invoke();
         }
     }
 

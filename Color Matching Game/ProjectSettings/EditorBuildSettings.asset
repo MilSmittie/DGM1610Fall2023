@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: c3cd7d9385d891a42a86dce0d90995bf
+  - enabled: 1
+    path: Assets/Scenes/321Go.unity
+    guid: ff240446e7e7ab7408303eb75bbe11b3
+  - enabled: 1
+    path: Assets/Scenes/ColorMatchingGame.unity
+    guid: 61ad33e762c8f9049be5b04ab47d6a42
   m_configObjects: {}
