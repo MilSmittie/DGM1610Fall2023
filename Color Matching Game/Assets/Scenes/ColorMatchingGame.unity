@@ -206,6 +206,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7968888739557052283, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
+        m_TargetAssemblyTypeName: CoroutineBehaviour, Assembly-CSharp
+        m_MethodName: set_CanRun
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a1bcca12c04c89f4394264864ab3b1a2, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1142105624}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -339,6 +363,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7968888739557052283, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
+        m_TargetAssemblyTypeName: CoroutineBehaviour, Assembly-CSharp
+        m_MethodName: set_CanRun
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1142105624}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -1503,27 +1539,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916953556}
   m_CullTransparentMesh: 1
---- !u!1 &1970234621 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2078000941829303037, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
-  m_PrefabInstance: {fileID: 8756701827493303971}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1970234625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970234621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a859f5c309349f945a42ded1ed4feae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameActionObj: {fileID: 0}
-  onRaiseEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2119477068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,16 +1776,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2078000941829303037, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1970234625}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1249866011}
-  - {fileID: 8756701827493303971}
   - {fileID: 605032457}
+  - {fileID: 8756701827493303971}
   - {fileID: 1142105622}

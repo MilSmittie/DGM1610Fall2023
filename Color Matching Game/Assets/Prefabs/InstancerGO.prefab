@@ -87,7 +87,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 05d532cba88ec6147b0c67fcfd9bee38, type: 2}
         m_TargetAssemblyTypeName: Instancer, Assembly-CSharp
-        m_MethodName: CreateInstanceListRandomly
+        m_MethodName: CreateInstanceFromListCounting
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: a0739dae155e0f74e80402706d24ebef, type: 2}
@@ -99,7 +99,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 9bb2ff25a09447744babde7a4ac54d72, type: 2}
         m_TargetAssemblyTypeName: Instancer, Assembly-CSharp
-        m_MethodName: CreateInstanceListRandomly
+        m_MethodName: CreateInstanceFromListCounting
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 553d96496c45a6a42b7880fd5d4811ff, type: 2}
