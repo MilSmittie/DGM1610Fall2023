@@ -340,6 +340,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1142105624}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Play
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a1bcca12c04c89f4394264864ab3b1a2, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: c1c3aecc9635d254da1caafa642327fa, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
@@ -362,30 +386,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: a1bcca12c04c89f4394264864ab3b1a2, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1142105624}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &179517855
@@ -2266,11 +2266,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9021106824020423751, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
       propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -9021106824020423751, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
       propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopCoroutine
+      value: StopAllCoroutines
+      objectReference: {fileID: 0}
+    - target: {fileID: -9021106824020423751, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
+      propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.MonoBehaviour, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -9021106824020423751, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
       propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -2319,6 +2323,14 @@ PrefabInstance:
     - target: {fileID: 2078000941829303037, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
       propertyPath: m_Name
       value: InstancerGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455811902326090576, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
+      propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartRepeatUntilFalse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455811902326090576, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
+      propertyPath: onRaiseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CoroutineBehaviour, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7968888739557052283, guid: fde86cff05aa6194c8207c283dd4f990, type: 3}
       propertyPath: seconds
